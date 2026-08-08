@@ -31,6 +31,8 @@ require("lazy").setup({
 	require("plugins.parser"), -- Language parser plugin (treesitter).
 	require("plugins.autocompletion"), -- Autocompletion plugin (nvim-cmp)
 	require("plugins.autoformatting"), -- Autoformatting plugin (none-ls).
+	require("plugins.ai_layer1"), -- AI autocomplete (Github copilot).
+	require("plugins.ai_layer2_3"), -- AI autocomplete (Claude integrated in panel).
 	require("plugins.fastjump"), -- Fast jump with labels plugin (flash).
 	require("plugins.fuzzyfind"), -- Fuzzy find plugin (telescope).
 	require("plugins.git"), -- Git enhancements.
