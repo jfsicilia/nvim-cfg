@@ -20,27 +20,31 @@ rtp:prepend(lazypath)
 -- Load plugins.
 require("lazy").setup({
 	require("plugins.welcome"), -- Displays recent files on welcome screen plugin (alpha).
-	require("plugins.theme"), -- Colorscheme plugin (catppuccin).
+	require("plugins.theme"), -- Colorscheme plugin (catppuccin)
 	require("plugins.fileexplorer"), -- File manager plugin (neotree).
-	require("plugins.infoline"), -- Buffer line information plugin (lualine).
-	require("plugins.tabs"), -- Buffer/tabs line plugin (bufferline).
+	require("plugins.infoline"), -- Buffer bottom line information plugin (lualine).
+	require("plugins.tabs"), -- Buffer/tabs top line plugin (bufferline).
 	require("plugins.edit"), -- Abbreviations / Substitutions / Coercions (abolish).
 	require("plugins.indentlines"), -- Displays vertical lines for indents plugin (indent-blankline).
-	require("plugins.search_n_replace"), -- Search and replace in file and filesystem.
+	require("plugins.search_n_replace"), -- Search and replace in file and filesystem (grug-far).
 	require("plugins.nav"), -- Navigation (tmux-nvim)
 	require("plugins.parser"), -- Language parser plugin (treesitter).
-	require("plugins.autocompletion"), -- Autocompletion plugin (nvim-cmp)
 	require("plugins.autoformatting"), -- Autoformatting plugin (none-ls).
-	require("plugins.ai_layer1"), -- AI autocomplete (Github copilot).
-	require("plugins.ai_layer2_3"), -- AI autocomplete (Claude integrated in panel).
+	require("plugins.autocompletion"), -- Autocompletion plugin
+	require("plugins.autocompletion_AI_L1"), -- AI autocomplete (Github copilot).
+	require("plugins.autocompletion_AI_L2_L3"), -- AI autocomplete (sidekick: NES and Claude integrated in panel).
 	require("plugins.fastjump"), -- Fast jump with labels plugin (flash).
 	require("plugins.fuzzyfind"), -- Fuzzy find plugin (telescope).
 	require("plugins.git"), -- Git enhancements.
 	require("plugins.terminal"), -- Terminal in nvim.
 	require("plugins.lazygit"), -- Lazy git plugin.
 	require("plugins.bufferfileexplorer"), -- Use buffer as file explorer plugin (oil).
-	require("plugins.lsp"), -- Language Server Providers plugin (nvim-lspconfig + mason).
+	require("plugins.lsp"), -- Language Server Providers plugin (nvim-lspconfig + mason)
 	require("plugins.outline"), -- Outline window plugin (aerial) .
 	require("plugins.help"), -- Help plugin (which-key).
 	require("plugins.misc"), -- Small misc plugins.
+
+	-- require("plugins.theme_cmp"), -- Colorscheme plugin (catppuccin).
+	-- require("plugins.autocompletion_cmp"), -- Autocompletion plugin (nvim-cmp)
+	-- require("plugins_cmp.lsp"), -- Language Server Providers plugin (nvim-lspconfig + mason).
 })

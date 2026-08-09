@@ -1,8 +1,8 @@
 return {
 	--		"github/copilot.vim",
 	"zbirenbaum/copilot.lua",
-	--	dependencies = {
-	--		"copilotlsp-nvim/copilot-lsp", -- (opcional) para funcionalidad NES
+	-- dependencies = {
+	-- 	{ "copilotlsp-nvim/copilot-lsp" }, -- (opcional) para funcionalidad NES
 	-- },
 	cmd = "Copilot",
 	event = "InsertEnter",
@@ -11,15 +11,30 @@ return {
 			suggestion = {
 				enabled = true,
 				auto_trigger = true,
+				debounce = 75,
 				keymap = {
-					accept = "<Tab>",
+					accept = "<M-l>",
 					next = "<M-]>",
 					prev = "<M-[>",
 					dismiss = "<C-]>",
 				},
 			},
 			panel = { enabled = false },
+			filetypes = {
+				["*"] = true,
+				gitcommit = false,
+				[".env"] = false,
+			},
 			nes = { enabled = false },
+			-- nes = {
+			-- 	enabled = true,
+			-- 	auto_trigger = true,
+			-- 	keymap = {
+			-- 		accept_and_goto = "<leader>cn", -- acepta y salta a la sugerencia
+			-- 		accept = false, -- desactivado para no chocar con el <Tab> de layer 1
+			-- 		dismiss = "<Esc>",
+			-- 	},
+			-- },
 		})
 	end,
 	-- Default configurations for copilot.lua:

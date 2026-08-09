@@ -1,1 +1,5 @@
 .session.vim
+/lua/plugins/ai_layer3.lua
+/lua/plugins/autocompletion_cmp.lua
+/lua/plugins/lsp_cmp.lua
+/lua/plugins/theme_cmp.lua
