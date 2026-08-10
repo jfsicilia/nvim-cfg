@@ -5,7 +5,6 @@ return {
 	-- Loads sidekick right after startup (instead of waiting for a `keys` mapping like
 	-- <leader>aa) so NES is active from the moment Neovim opens. InsertEnter is added as a
 	-- safety net in case VeryLazy is ever delayed past the first keystroke.
-	-- event = { "VeryLazy", "InsertEnter" },
 	event = { "InsertEnter" },
 	opts = {
 		cli = {
@@ -19,9 +18,21 @@ return {
 				},
 			},
 		},
-		nes = { enabled = true },
+		nes = { enabled = true }, -- use sidekick to manage NES instead of copilot.lua (ai_layer1.lua).
 	},
 	keys = {
+		{
+			"<Tab>", -- Use Tab to jump to next edit suggestion (if any) or apply it (if no more suggestions).
+			function()
+				-- if there is a next edit, jump to it, otherwise apply it if any
+				if not require("sidekick").nes_jump_or_apply() then
+					return "<Tab>" -- fallback to normal tab
+				end
+			end,
+			mode = { "n" },
+			expr = true,
+			desc = "Sidekick: Goto/Apply Next Edit Suggestion",
+		},
 		{
 			"<leader>aa",
 			function()
@@ -66,18 +77,6 @@ return {
 				require("sidekick.cli").close()
 			end,
 			desc = "Sidekick: Detach a CLI Session",
-		},
-		{
-			"<Tab>",
-			function()
-				-- if there is a next edit, jump to it, otherwise apply it if any
-				if not require("sidekick").nes_jump_or_apply() then
-					return "<Tab>" -- fallback to normal tab
-				end
-			end,
-			mode = { "n" },
-			expr = true,
-			desc = "Sidekick: Goto/Apply Next Edit Suggestion",
 		},
 	},
 }

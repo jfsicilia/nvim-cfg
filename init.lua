@@ -43,8 +43,4 @@ require("lazy").setup({
 	require("plugins.outline"), -- Outline window plugin (aerial) .
 	require("plugins.help"), -- Help plugin (which-key).
 	require("plugins.misc"), -- Small misc plugins.
-
-	-- require("plugins.theme_cmp"), -- Colorscheme plugin (catppuccin).
-	-- require("plugins.autocompletion_cmp"), -- Autocompletion plugin (nvim-cmp)
-	-- require("plugins_cmp.lsp"), -- Language Server Providers plugin (nvim-lspconfig + mason).
 })

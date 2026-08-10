@@ -2,16 +2,16 @@ local kind_icons = {
 	Text = "󰉿",
 	Method = "m",
 	Function = "󰊕",
-	Constructor = "",
-	Field = "",
+	Constructor = "𝐶",
+	Field = "𝐹",
 	Variable = "󰆧",
 	Class = "󰌗",
-	Interface = "",
-	Module = "",
-	Property = "",
-	Unit = "",
+	Interface = "𝐼",
+	Module = "𝑀",
+	Property = "𝑃",
+	Unit = "𝑈",
 	Value = "󰎠",
-	Enum = "",
+	Enum = "𝐸",
 	Keyword = "󰌋",
 	Snippet = "",
 	Color = "󰏘",
@@ -20,7 +20,7 @@ local kind_icons = {
 	Folder = "󰉋",
 	EnumMember = "",
 	Constant = "󰇽",
-	Struct = "",
+	Struct = "𝑆",
 	Event = "",
 	Operator = "󰆕",
 	TypeParameter = "󰊄",
@@ -52,14 +52,10 @@ return { -- Autocompletion (blink.cmp variant of autocompletion.lua)
 	opts = {
 		snippets = { preset = "luasnip" },
 		keymap = {
-			-- Custom keymap (not a preset) to mirror autocompletion.lua's behaviour exactly:
-			-- Tab/S-Tab select items (not snippet jump), CR accepts, C-space forces the menu.
 			preset = "none",
-			["<C-j>"] = { "select_next", "fallback" }, -- Select the [n]ext item
-			["<C-k>"] = { "select_prev", "fallback" }, -- Select the [p]revious item
-			["<Tab>"] = { "select_next", "fallback" }, -- Select the [n]ext item
-			["<S-Tab>"] = { "select_prev", "fallback" }, -- Select the [p]revious item
-			["<CR>"] = { "accept", "fallback" }, -- Accept the completion with Enter.
+			["<Up>"] = { "select_prev", "fallback" }, -- Select the [p]revious item
+			["<Down>"] = { "select_next", "fallback" }, -- Select the [n]ext item
+			["<Tab>"] = { "accept", "fallback" }, -- Accept the completion with Tab.
 			["<C-space>"] = { "show" }, -- Manually trigger a completion.
 		},
 		completion = {
