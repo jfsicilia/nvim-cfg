@@ -13,7 +13,6 @@ return {
 					next = "<Right>",
 					prev = "<Left>",
 					dismiss = "<Esc>",
-					open = "<M-CR>",
 				},
 			},
 			panel = { enabled = false },
