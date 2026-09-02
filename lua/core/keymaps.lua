@@ -34,6 +34,9 @@ vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- to do nothing in insert mode, so it won't interfere with my workflow.
 imap("<C-A-space>", "<Nop>", "Does nothing. Avoids writing <F12> in insert mode.")
 
+-- Exit terminal mode with double Esc. This is useful when using the terminal in a split window.
+tmap("<esc><esc>", "<C-\\><C-n>", "Exit terminal mode")
+
 -- Clear highlights
 nmap("<Esc>", ":noh<CR>", "Clear highlights")
 
