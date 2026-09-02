@@ -9,7 +9,7 @@ return {
 				auto_trigger = true,
 				debounce = 75,
 				keymap = {
-					accept = "<Tab>",
+					accept = "<C-space>",
 					next = "<Right>",
 					prev = "<Left>",
 					dismiss = "<Esc>",

@@ -30,6 +30,10 @@ vim.keymap.set({ "n", "v" }, ",", "<Nop>", { silent = true })
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+-- C-A-Space is bound to voice to text in an external app. I want this combo
+-- to do nothing in insert mode, so it won't interfere with my workflow.
+imap("<C-A-space>", "<Nop>", "Does nothing. Avoids writing <F12> in insert mode.")
+
 -- Clear highlights
 nmap("<Esc>", ":noh<CR>", "Clear highlights")
 

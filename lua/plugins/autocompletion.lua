@@ -55,8 +55,9 @@ return { -- Autocompletion (blink.cmp variant of autocompletion.lua)
 			preset = "none",
 			["<Up>"] = { "select_prev", "fallback" }, -- Select the [p]revious item
 			["<Down>"] = { "select_next", "fallback" }, -- Select the [n]ext item
-			["<Tab>"] = { "accept", "fallback" }, -- Accept the completion with Tab.
-			["<C-space>"] = { "show" }, -- Manually trigger a completion.
+			["<Tab>"] = { "accept", "show", "fallback" }, -- Accept the completion with Tab.
+			--			["<C-space>"] = { "accept", "fallback" }, -- Accept the completion with Tab.
+			--			["<M-space>"] = { "show" }, -- Manually trigger a completion.
 		},
 		completion = {
 			menu = {
