@@ -6,6 +6,10 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 	group = core_autocmd,
 	callback = function()
 		vim.bo.filetype = "commonlisp"
+		-- kanata .kbd files use ";;" for comments, not the lisp default ";".
+		-- This sets the buffer fallback; gcc/gc resolve via tree-sitter, so the
+		-- real override lives in after/ftplugin/lisp.lua.
+		vim.bo.commentstring = ";; %s"
 	end,
 })
 
