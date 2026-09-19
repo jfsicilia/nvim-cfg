@@ -219,6 +219,29 @@ return {
 					client.server_capabilities.hoverProvider = false
 				end,
 			},
+			-- ts_ls: TypeScript/JavaScript language server.
+			ts_ls = {
+				settings = {
+					typescript = {
+						inlayHints = {
+							includeInlayParameterNameHints = "all",
+							includeInlayFunctionParameterTypeHints = true,
+							includeInlayVariableTypeHints = true,
+							includeInlayFunctionLikeReturnTypeHints = true,
+							includeInlayPropertyDeclarationTypeHints = true,
+						},
+					},
+					javascript = {
+						inlayHints = {
+							includeInlayParameterNameHints = "all",
+							includeInlayFunctionParameterTypeHints = true,
+							includeInlayVariableTypeHints = true,
+							includeInlayFunctionLikeReturnTypeHints = true,
+							includeInlayPropertyDeclarationTypeHints = true,
+						},
+					},
+				},
+			},
 			jsonls = {},
 			sqlls = {},
 			terraformls = {},

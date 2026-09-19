@@ -2,7 +2,7 @@
 -- Info interesante:
 -- https://www.reddit.com/r/neovim/comments/1ky0i9q/treesittermodulesnvim_a_reimplementation_of/
 -- https://www.reddit.com/r/neovim/comments/1l3z4j4/help_with_new_treesitter_setup_in_neovim_default/
-local languages = { "c", "lua", "python", "rust", "javascript", "zig", "terraform", "commonlisp" }
+local languages = { "c", "lua", "python", "rust", "javascript", "typescript", "tsx", "zig", "terraform", "commonlisp" }
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
