@@ -1,4 +1,25 @@
--- Fuzzy Finder (files, lsp, etc)
+-- Fuzzy finder (nvim-telescope/telescope.nvim + telescope-fzf-native for better performance +
+-- telescope-ui-select to use telescope as the vim.ui.select picker): finder for files, text,
+-- buffers, LSP symbols, git, etc.
+-- Keybinds:
+--   <leader>sf         Find files
+--   <leader>sg         Live grep (search text across the project)
+--   <leader>sw         Search word under cursor
+--   <leader>s/         Live grep in open buffers
+--   <leader>/          Search in the current buffer
+--   <leader>sb         Search open buffers
+--   <leader><space>    Search open buffers
+--   <leader>sm         Search marks
+--   <leader>so         Recent files
+--   <leader>sh         Search help
+--   <leader>sd         Search diagnostics
+--   <leader>sr         Resume last search
+--   <leader>sds        LSP document symbols
+--   <leader>gf         Git files
+--   <leader>gc         Git commits
+--   <leader>gcf        Git commits for current file
+--   <leader>gb         Git branches
+--   <leader>gs         Git status
 return {
   'nvim-telescope/telescope.nvim',
   event = 'VimEnter',
@@ -53,7 +74,7 @@ return {
       },
       pickers = {
         find_files = {
-          file_ignore_patterns = { 'node_modules', '.git', '.venv' },
+          file_ignore_patterns = { 'node_modules', '%.git', '%.venv' },
           hidden = true,
         },
         buffers = {
@@ -74,7 +95,7 @@ return {
           initial_mode = 'insert',
         },
         live_grep = {
-          file_ignore_patterns = { 'node_modules', '.git', '.venv' },
+          file_ignore_patterns = { 'node_modules', '%.git', '%.venv' },
           additional_args = function(_)
             return { '--hidden' }
           end,

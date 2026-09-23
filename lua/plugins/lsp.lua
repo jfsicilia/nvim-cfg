@@ -1,3 +1,23 @@
+-- LSP setup (neovim/nvim-lspconfig + mason.nvim + mason-lspconfig + mason-tool-installer +
+-- fidget.nvim for notifications): installs and configures the language servers (lua_ls,
+-- basedpyright, ruff, ts_ls, jsonls, sqlls, terraformls, yamlls, bashls, dockerls,
+-- docker_compose_language_service, html...). This is the active variant, using blink.cmp for
+-- capabilities (see lsp_cmp.lua, the nvim-cmp based alternative, not loaded).
+-- Keybinds (set when an LSP attaches to a buffer, LspAttach):
+--   gd            Go to definition
+--   gr            References
+--   gI            Go to implementation
+--   gD            Go to declaration
+--   K             Hover documentation
+--   <leader>lD    Type definition
+--   <leader>lds   Document symbols
+--   <leader>lws   Workspace symbols
+--   <leader>lrn   Rename
+--   <leader>lca   Code action
+--   <leader>lwa   Add workspace folder
+--   <leader>lwr   Remove workspace folder
+--   <leader>lwl   List workspace folders
+--   <leader>lth   Toggle inlay hints (if the server supports them)
 return {
 	"neovim/nvim-lspconfig",
 	dependencies = {

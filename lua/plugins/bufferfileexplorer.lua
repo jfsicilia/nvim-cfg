@@ -1,3 +1,22 @@
+-- File explorer as an editable buffer (stevearc/oil.nvim): replaces Neovim's default directory
+-- explorer, letting you edit the filesystem as if it were text.
+-- Keybinds (inside an oil buffer):
+--   g?      Show help
+--   <CR>    Select/open
+--   <C-s>   Open in vertical split
+--   <C-h>   Open in horizontal split
+--   <C-t>   Open in new tab
+--   <C-p>   Preview
+--   <C-c>   Close
+--   <C-l>   Refresh
+--   -       Go up to parent directory
+--   _       Open cwd
+--   `       Cd to directory
+--   ~       Cd to directory (this tab only)
+--   gs      Change sort order
+--   gx      Open with external app
+--   g.      Toggle hidden files
+--   g\      Toggle trash
 return {
   'stevearc/oil.nvim',
   -- Optional dependencies

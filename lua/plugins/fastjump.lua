@@ -1,3 +1,8 @@
+-- Fast on-screen jumping with labels (folke/flash.nvim): lets you jump to any visible spot by
+-- marking targets with letters, and also jump between treesitter nodes.
+-- Keybinds (normal, visual, operator-pending modes):
+--   <space>    Start Flash jump
+--   <S-space>  Flash Treesitter (jump/select syntax nodes)
 return {
   'folke/flash.nvim',
   event = 'VeryLazy',

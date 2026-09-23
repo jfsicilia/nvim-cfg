@@ -1,3 +1,15 @@
+-- Top buffer/tab line (akinsho/bufferline.nvim + moll/vim-bbye to close buffers without
+-- closing the window): shows open buffers numbered ordinally.
+-- Keybinds (jump by position in the bufferline, not by buffer number):
+--   <leader>1   Jump to buffer 1
+--   <leader>2   Jump to buffer 2
+--   <leader>3   Jump to buffer 3
+--   <leader>4   Jump to buffer 4
+--   <leader>5   Jump to buffer 5
+--   <leader>6   Jump to buffer 6
+--   <leader>7   Jump to buffer 7
+--   <leader>8   Jump to buffer 8
+--   <leader>9   Jump to buffer 9
 return {
   'akinsho/bufferline.nvim',
   dependencies = {

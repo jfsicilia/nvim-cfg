@@ -1,3 +1,6 @@
+-- Color theme (catppuccin/nvim), active variant with blink.cmp integration. Light/dark flavour
+-- picked automatically via `background` (latte for light, mocha for dark).
+-- Keybinds: none.
 return {
   "catppuccin/nvim",
   name = "catppuccin",

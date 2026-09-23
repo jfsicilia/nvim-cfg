@@ -1,3 +1,6 @@
+-- Integrated floating terminal (akinsho/toggleterm.nvim).
+-- Keybinds:
+--   <C-j>   Open/close the floating terminal
 return {
   'akinsho/toggleterm.nvim',
   version = '*',

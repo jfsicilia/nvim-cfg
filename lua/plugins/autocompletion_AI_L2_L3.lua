@@ -1,3 +1,13 @@
+-- AI levels 2 and 3 (folke/sidekick.nvim): Next Edit Suggestions (NES) using Copilot's LSP,
+-- plus an AI chat/CLI (Claude) embedded in a tmux split.
+-- Keybinds:
+--   <Tab>        Goto/apply next edit suggestion (NES)
+--   <leader>aa   Select agent
+--   <leader>ac   Toggle Claude session
+--   <leader>as   Send selection to agent (visual mode)
+--   <leader>af   Send current file to agent
+--   <leader>ap   Select prompt
+--   <leader>ad   Close session
 return {
 	"folke/sidekick.nvim",
 	-- NOTE: no copilot-lsp dependency needed: copilot.lua (ai_layer1.lua) already

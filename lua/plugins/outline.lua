@@ -1,3 +1,10 @@
+-- Code symbol outline (stevearc/aerial.nvim): sidebar panel listing functions, classes, etc.
+-- of the current file (via treesitter/LSP).
+-- Keybinds:
+--   <leader>to    Open/close the outline panel
+--   <leader>ton   Open/close navigation mode
+--   {             Jump to previous symbol (only where aerial is attached)
+--   }             Jump to next symbol (only where aerial is attached)
 return {
   'stevearc/aerial.nvim',
   lazy_load = true,

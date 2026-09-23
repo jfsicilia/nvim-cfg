@@ -1,4 +1,7 @@
--- Set lualine as statusline
+-- Bottom statusline (nvim-lualine/lualine.nvim): shows mode, git branch, file name,
+-- diagnostics, diff, encoding, filetype, cursor position and progress. The theme
+-- (nord/onedark) is picked via the NVIM_THEME environment variable.
+-- Keybinds: none.
 return {
   'nvim-lualine/lualine.nvim',
   config = function()

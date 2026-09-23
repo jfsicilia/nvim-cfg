@@ -1,5 +1,13 @@
--- Highlight, edit, and navigate code
--- Info interesante:
+-- Syntax highlighting, editing and code navigation (nvim-treesitter), configured with
+-- treesitter-modules.nvim to easily enable highlighting, indentation, folding and incremental
+-- selection for the languages listed below.
+-- Keybinds: none defined here; treesitter-modules' incremental_selection uses its own
+-- built-in defaults (buffer-local, active once treesitter attaches):
+--   gnn   Start incremental selection
+--   grn   Expand selection to the next node
+--   grc   Expand selection to the surrounding scope
+--   grm   Shrink selection to the previous node
+-- Interesting reading:
 -- https://www.reddit.com/r/neovim/comments/1ky0i9q/treesittermodulesnvim_a_reimplementation_of/
 -- https://www.reddit.com/r/neovim/comments/1l3z4j4/help_with_new_treesitter_setup_in_neovim_default/
 local languages = { "c", "lua", "python", "rust", "javascript", "typescript", "tsx", "zig", "terraform", "commonlisp" }
@@ -10,10 +18,10 @@ return {
 		build = ":TSUpdate",
 	},
 	{
-		-- Este plugin, permite configurar treesitter facilmente: lenguajes, folding, highlighting,
-		-- indent e incremental_selection. También podrías utilizar la configuración que viene
-		-- comentada debajo si no quieres depender de este plugin, pero el tema del incremento
-		-- de la selección no lo tendrías configurado.
+		-- This plugin lets you easily configure treesitter: languages, folding, highlighting,
+		-- indent and incremental_selection. You could also use the commented-out config
+		-- below if you don't want to depend on this plugin, but incremental selection
+		-- wouldn't be configured that way.
 		"MeanderingProgrammer/treesitter-modules.nvim",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		opts = {

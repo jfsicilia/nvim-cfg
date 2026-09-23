@@ -1,4 +1,13 @@
--- Standalone plugins with less than 10 lines of config go here
+-- Standalone plugins with very little config (less than 10 lines each):
+-- - windwp/nvim-ts-autotag: auto-closes and renames matching HTML/JSX tags.
+-- - tpope/vim-sleuth: automatically detects tabstop/shiftwidth per file.
+-- - tpope/vim-fugitive: Git commands inside Vim (:Git, :Gdiffsplit, etc.).
+-- - tpope/vim-rhubarb: GitHub integration for vim-fugitive (:GBrowse).
+-- - will133/vim-dirdiff: diff between two folders.
+-- - windwp/nvim-autopairs: auto-closes parentheses, brackets and quotes while typing.
+-- - folke/todo-comments.nvim: highlights TODO/FIXME/NOTE/etc. in comments.
+-- - catgoose/nvim-colorizer.lua: highlights colors (#fff, rgb(...), etc.) with their real color.
+-- Keybinds: none defined here; each plugin uses its own default commands/keybinds.
 return {
 	{
 		-- autoclose tags

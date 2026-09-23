@@ -1,3 +1,21 @@
+-- Git signs in the gutter and hunk utilities (lewis6991/gitsigns.nvim): marks added/modified/
+-- deleted lines in the left margin and lets you manage changes hunk by hunk.
+-- Keybinds (set when gitsigns attaches to a buffer):
+--   ]c / [c        Go to next/previous hunk
+--   <leader>ghs    Stage hunk (normal and visual)
+--   <leader>ghr    Reset hunk (normal and visual)
+--   <leader>ghS    Stage entire buffer
+--   <leader>ghR    Reset entire buffer
+--   <leader>ghp    Preview hunk
+--   <leader>ghi    Preview hunk inline
+--   <leader>ghb    Blame current line
+--   <leader>ghd    Diff the file
+--   <leader>ghD    Diff against the previous commit (~)
+--   <leader>ghQ    Quickfix list with all hunks
+--   <leader>ghq    Quickfix list with current buffer's hunks
+--   <leader>tb     Toggle inline blame
+--   <leader>tl     Toggle word diff
+--   ih             "hunk" text object (operator-pending and visual)
 return {
   -- Adds git related signs to the gutter, as well as utilities for managing changes
   'lewis6991/gitsigns.nvim',

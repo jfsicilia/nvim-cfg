@@ -1,3 +1,11 @@
+-- Autocompletion (blink.cmp): main completion engine (LSP, snippets, buffer, path), with
+-- LuaSnip as the snippet engine. This is the active variant (see also autocompletion_cmp.lua,
+-- the nvim-cmp based alternative, not loaded).
+-- Keybinds (inside the completion menu):
+--   <Up>    Select previous suggestion
+--   <Down>  Select next suggestion
+--   <Tab>   Accept suggestion (or show the menu if not visible)
+
 local kind_icons = {
 	Text = "󰉿",
 	Method = "m",

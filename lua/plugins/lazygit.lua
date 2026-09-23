@@ -1,3 +1,8 @@
+-- LazyGit embedded in Neovim (kdheepak/lazygit.nvim): opens the LazyGit TUI in a floating
+-- window inside Neovim.
+-- Keybinds: none active (the <leader>lg mapping is commented out in this file); used via the
+-- :LazyGit, :LazyGitConfig, :LazyGitCurrentFile, :LazyGitFilter, :LazyGitFilterCurrentFile
+-- commands.
 return {
   'kdheepak/lazygit.nvim',
   cmd = {

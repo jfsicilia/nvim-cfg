@@ -1,4 +1,7 @@
--- Format on save and linters
+-- Formatting and linting (none-ls.nvim / null-ls + mason-null-ls): automatically formats the
+-- buffer on save (BufWritePre) using prettier, stylua, shfmt, ruff, terraform_fmt, and runs the
+-- checkmake linter for Makefiles. mason-null-ls installs the required tools automatically.
+-- Keybinds: none (everything triggers automatically on save).
 return {
 	"nvimtools/none-ls.nvim",
 	dependencies = {

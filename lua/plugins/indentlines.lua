@@ -1,3 +1,6 @@
+-- Indentation guides (lukas-reineke/indent-blankline.nvim): draws vertical lines to visualize
+-- code indentation levels.
+-- Keybinds: none.
 return {
   'lukas-reineke/indent-blankline.nvim',
   main = 'ibl',

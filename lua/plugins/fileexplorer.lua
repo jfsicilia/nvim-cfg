@@ -1,3 +1,21 @@
+-- File explorer sidebar (nvim-neo-tree/neo-tree.nvim), plus nvim-lsp-file-operations (keeps LSP
+-- references up to date when files are moved/renamed) and nvim-window-picker (picks the target
+-- window when opening a file from the tree).
+-- Keybinds:
+--   <leader>e   Open/close neo-tree
+-- Inside the tree (neo-tree's own mappings, not exhaustive — see `:h neo-tree-mappings`):
+--   <space>    Expand/collapse
+--   <cr>       Open
+--   a / A      Add file / directory
+--   d          Delete
+--   r          Rename
+--   y / x / p  Copy / cut / paste
+--   s / S      Open in vsplit / split
+--   t          Open in new tab
+--   H          Toggle hidden files
+--   /          Search
+--   R          Refresh
+--   ?          Help
 return {
   {
     'nvim-neo-tree/neo-tree.nvim',

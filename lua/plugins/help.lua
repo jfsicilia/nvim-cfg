@@ -1,3 +1,9 @@
+-- Keybind hints (folke/which-key.nvim): shows a popup with the available key combos as you
+-- type them, and here it also documents (as labels only, not actual bindings) several native
+-- Vim combos like <C-b>/<C-f>, <C-u>/<C-d>, <C-a>/<C-x>, etc.
+-- Keybinds: defines no combos of its own; inside the popup:
+--   <c-n>   Scroll the list down
+--   <c-p>   Scroll the list up
 return {
   -- Hints keybinds
   'folke/which-key.nvim',
